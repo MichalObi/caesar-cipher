@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Szyfr Cezara</title>
+	<meta http-equiv="cleartype" content="on">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="modernfactory.pl" />
+	<meta name="revisit-after" content="2" />
+	<meta name="language" content="PL" />
+	<meta name="copyright" content="" />
+	<meta name="robots" content="All" />
+
+	<!-- Open Graph meta -->
+	<meta property="og:title" content="">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="">
+	
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/sweetalert.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="content-wrap">
+		<textarea id="cezar-txt"></textarea>
+		<div class="btn-wrap">
+			<a href="#" class="btn" id="crypt" onclick="doCrypt(false);">szyfruj</a>
+			<a href="#" class="btn" id="decrypt" onclick="doCrypt(true);">odszyfruj</a>
+		</div>
+	</div>
+	<script src="js/sweetalert.min.js"></script>
+	<script src="js/cezar.js"></script>
+</body>
+</html>

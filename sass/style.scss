@@ -1,0 +1,100 @@
+@import 'compass';
+@import 'compass/reset';
+@import 'mixins';
+
+$default-transition-duration: 0.2s;
+
+html{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+body{
+	position: relative;
+	width: 100%;
+    height: 100%;
+	background: #ffffff;
+	font-size: 15px;
+	color: #000000;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+}
+*, *:before, *:after{
+	@include box-sizing(border-box);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+input:-webkit-autofill, textarea:-webkit-autofill{ -webkit-box-shadow: 0 0 0px 1000px white inset; }
+.clear{ clear: both; }
+strong, b{ font-weight: 700; }
+a{
+	text-decoration: none;
+	color: inherit;
+	&:hover{ text-decoration: none; }
+}
+img {
+	width: 100%;
+	height: auto;
+}
+
+@include gridSystem(); // Bootstrap v 3.3.1 grid system
+
+/* Main Style */
+
+.content-wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+}
+
+textarea {
+	padding: 20px;
+	outline: none;
+	height: 400px;
+	width: 800px;
+	resize: vertical;
+	background: #f4f4f4;
+	border: 2px solid #000;
+	font: 17px/27px 'Open Sans', sans-serif;
+}
+
+.btn-wrap {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 0;
+	.btn {
+		margin: 0 20px;
+		padding: 0 20px;
+		font-weight: 400;
+		text-transform: uppercase;
+		text-align: center;
+		border: 1px solid transparent;
+		font: 15px/50px 'Open Sans', sans-serif;
+		background-color: #f4f4f4;
+		border: 1px solid #000;
+		@include transition();
+		@include inline-block();
+		@include border-radius(5px);
+		&:hover {
+			border: 1px solid transparent;
+			background-color: adjust-lightness(#f4f4f4, -5%);
+		}
+	}
+}
+
+
+@media (min-width: 768px) { }
+
+@media (min-width: 992px) { }
+
+@media (min-width: 1200px) { }
+
+@media (orientation:portrait){}
+@media (orientation:landscape){}
+@media 
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2){}
